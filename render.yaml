@@ -1,0 +1,17 @@
+services:
+- type: web
+  name: web 
+  runtime: docker
+  dockerfilePath: ./Dockerfile.web
+  envVars:
+    - key: PORT
+      value: 8000
+  startCommand: go run main.go -b 0.0.0.0 
+
+- type: web
+  name: nginx
+  runtime: docker
+  dockerfilePath: ./Dockerfile.nginx
+  envVars: 
+    - key: PORT
+      value: 8080
