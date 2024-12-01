@@ -1,7 +1,7 @@
 services:
 - type: web
   name: web 
-  runtime: go
+  runtime: docker
   dockerfilePath: ./Dockerfile.web
   envVars:
     - key: PORT
