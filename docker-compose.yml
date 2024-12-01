@@ -1,8 +1,8 @@
 services:
-  web:
+  app:
     build: 
       context: .
-      dockerfile: Dockerfile.web
+      dockerfile: Dockerfile.app
     ports:
       - "8000:8000"
     command: go run main.go -b 0.0.0.0
