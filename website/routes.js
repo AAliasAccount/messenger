@@ -1,9 +1,8 @@
 var idCount = 0;
 
 
-
 async function getFullConvo() {
-    var url = "http://localhost:8000/messages";
+    var url = "https://messenger-uuye.onrender.com/messages";
     fetch(url)
         .then(res => res.json())
         .then( data => {
@@ -26,7 +25,7 @@ function sendMessage(messageBox, name){
     console.log(completeMessage);
     
 
-    fetch("http://localhost:8000/newMessage", {
+    fetch("https://messenger-uuye.onrender.com/newMessage", {
         method: 'POST',
         body: completeMessage,
         headers: { "Content-Type": "application/json"}
